@@ -1,0 +1,65 @@
+/* 
+Palette de couleur demander
+
+:root {
+  --color1: #FBFBFB;
+  --color2: #27201F;
+  --color3: #DFC7E1;
+} 
+
+*/
+
+/* Retire les parametres par defaut du html */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: var(--color1);
+}
+/* Definie la zone de contenu du footer */
+body footer .content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* Style commun des section */
+body footer .content .communStyle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Playfair Display";
+  color: #000;
+}
+/* Separe les titres des sections */
+body footer .content .communStyle .communFooterTitle {
+  margin-bottom: 20px;
+}
+/* Aligne les logos des reseaux */
+body footer .content .social-net ul {
+  display: flex;
+}
+/* Change le curseur sur les logos */
+body footer .content .social-net ul li {
+  cursor: pointer;
+}
+/* Taille des logos */
+body footer .content .social-net ul li .logo-social {
+  height: 49px;
+}
+/* Section copyright */
+body footer .copyright {
+  text-align: center;
+  margin-top: 83px;
+  color: #949494;
+}
+/* Contenue de la section copyright */
+body footer .copyright h3 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+}/*# sourceMappingURL=main.css.map */
