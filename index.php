@@ -165,7 +165,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Me connecter</button>
 
-        <!---------------------- Connection avec l'api google ------------------------>
+        <!--------------------------------------------- Connection avec l'api google ------------------------------------------------->
         <script>
 			    function onSuccess(googleUser) {
 				    var profile = googleUser.getBasicProfile();
@@ -173,7 +173,7 @@
 					    var request = gapi.client.plus.people.get({
 						    'userId': 'me'
 					    });
-					    //Display the user details
+					    //------------------------------- Affiche les détails utilisateurs --------------------------------------------------->
 					    request.execute(function (resp) {
               
 						    var profileHTML = '<div class="profile"><div class="head">Welcome '+resp.name.givenName+'! <a   href="javascript:void(0);" onclick="signOut();">Sign out</a></div>';
@@ -183,9 +183,11 @@
 					    });
 				    });
 			    }
+          //---------------------- Affiche les erreurs ------------------------->
 			    function onFailure(error) {
 				    alert(error);
 			    }
+          //--------------------- Affiche le boutton de connection --------------------------->
 			    function renderButton() {
 				    gapi.signin2.render('gSignIn', {
 				    	'scope': 'profile email',
@@ -197,6 +199,7 @@
 				    	'onfailure': onFailure
 				    });
 			    }
+          //------------------------------- Deconnection ------------------------------>
 			    function signOut() {
 			    	var auth2 = gapi.auth2.getAuthInstance();
 			    	auth2.signOut().then(function () {
@@ -205,22 +208,13 @@
 			    	});
 			    }
 		    </script>
+        <!-------------------------------- Bloc d'affichage de l'api --------------------------------->
         <div id="bloc_page">
 
           <div id="gSignIn"></div>		
           <div class="userContent"></div>
 
-          <!--
-          goo.gl/2TdxK8
-          Sign-In Branding Guidelines
-          goo.gl/Ne54oh
-          .signIn()
-
-          Sample code
-          goo.gl/KTme3p
-          -->
-
-          </div> <!-- div bloc_page -->
+          </div> 
         </div>
 
     </form>
@@ -288,9 +282,6 @@
       </h3>
     </div>
     </footer>
-
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X  +965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
