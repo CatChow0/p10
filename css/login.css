@@ -62,6 +62,7 @@
 
 #Check {
 	border-radius: 10px;
+	transition: all ease-in-out 250ms;
 }
 
 #Check:checked + label {

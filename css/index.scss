@@ -163,7 +163,12 @@ body {
 	justify-content: space-evenly;
 	display: flex;
 }
-
+.noSelectText {
+	user-select: none;
+	-moz-user-select: none;
+  	-webkit-user-select: none;
+  	-ms-user-select: none;
+}
 
 * {
 	margin: 0;
