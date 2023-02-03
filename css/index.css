@@ -40,7 +40,6 @@ body footer .copyright h3 {
   font-weight: 700;
   font-family: "Playfair Display";
 }
-
 .navbar {
   display: flex;
   margin-left: auto;
@@ -62,26 +61,21 @@ body footer .copyright h3 {
   margin-right: 65px;
   color: black;
 }
-
 .dropdown-item {
   font-family: "Red Rose", cursive;
 }
-
 #navbarDropdown {
   font-family: "Red Rose", cursive;
   font-size: 18px;
   line-height: 22px;
 }
-
 .dropdown-toggle::after {
   content: none;
 }
-
 .dropdown-menu > #navbarDropdown {
   font-size: 16px;
   padding: 0.25rem 1.5rem;
 }
-
 .search-box {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -91,7 +85,6 @@ body footer .copyright h3 {
   height: fit-content;
   position: relative;
 }
-
 .input-search {
   height: 50px;
   width: 50px;
@@ -130,7 +123,6 @@ body footer .copyright h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-
 .btn-search {
   width: 32px;
   height: 32px;
@@ -153,20 +145,17 @@ body footer .copyright h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-
 #gSignIn {
   margin-top: 25px;
   justify-content: space-evenly;
   display: flex;
 }
-
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
 }
-
 @media only screen and (min-width: 1200px) {
   .imglogogc {
     padding-right: 20px;
