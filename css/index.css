@@ -2,35 +2,70 @@
 /* ----------------------------------SEARCH------------------------------------------------------ */
 /* ----------------------------------BAS DE PAGE--------------------------------------------- */
 :root {
-  --color1: #FBFBFB;
-  --color2: #27201F;
-  --color3: #DFC7E1;
+  --color1: #2d4893;
+  --color2: #f59658;
+  --color3: #c74770;
 }
 
 body {
   margin-top: 50px;
 }
-body .profile-sidebar.on {
-  width: 250px;
+body .profile-logout {
+  display: none;
+}
+body .profile-logout.on {
+  display: block;
+  width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #949494;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
   top: 0;
-  right: 0;
+  z-index: 10;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
 }
-body .profile-sidebar.on .btn-logout {
-  background-color: red;
-  display: flex;
-  flex-direction: column;
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .profile-logout.on .btn-logout {
   text-align: center;
+  justify-content: center;
+  margin-top: 20vh;
 }
-body .profile-sidebar.on .btn-logout a {
+body .profile-logout.on .btn-logout .close-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  font-size: xx-large;
+  transition: all ease-in-out 200ms;
+}
+body .profile-logout.on .btn-logout .close-menu p {
+  margin-top: 50px;
+  font-size: larger;
+  color: white;
   font-weight: 900;
 }
-body .profile-sidebar.on .btn-logout .text-animated {
-  animation: color-change 5s infinite;
+body .profile-logout.on .btn-logout .close-menu:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: all ease-in-out 200ms;
+}
+body .profile-logout.on .btn-logout a {
+  font-size: 100px;
+  text-decoration: underline;
+}
+body .profile-logout.on .btn-logout .text-animated {
+  animation: color-change 6s infinite;
 }
 @keyframes color-change {
   0% {
@@ -81,6 +116,11 @@ body footer .copyright h3 {
   margin-right: auto;
   height: 100%;
   padding-bottom: 1cm;
+}
+.navbar .logout-menu {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
 }
 .navbar .collapse h1 {
   font-family: "Red Rose", cursive;

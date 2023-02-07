@@ -99,14 +99,14 @@
             </li>
 
 
-            <!--------------------SEARCH--------------------------------->
+            <!------------------------------- SEARCH --------------------------------->
             <div class="search-box">
               <button class="btn-search"><i class="fa fa-search"></i></button>
               <input type="text" class="input-search" placeholder="Que cherchez-vous ?">
             </div>
 
 
-            <!--------------------PROFILE--------------------------------->
+            <!------------------------------- PROFILE --------------------------------->
             <div class="profile-btn">
               <a href="#" title="Profil">
                 <img class="iconprofil" src="assets/iconprofile.png" alt="Profil" width="32px" 
@@ -114,49 +114,34 @@
               </a>
             </div>
 
+            <!------------------------------- Bouton logout --------------------------------->
+            <div>
+              <a href="#" title="Logout">
+                <img class="logout-menu" src="assets/logout.png" alt="logout" >
+              </a>
+            </div>
+
           </ul>
         </div>
       </nav>
     </div>
+    <!-------------------------- Interface déconnexion --------------------------->
     <?php
     if (isset($_SESSION['email'])) 
     {
       ?>
-    <div class="profile-sidebar on">
+    <div class="profile-logout ">
       <div class="btn-logout">
-        <a class="text-animated" href="logout.php">
-          D
+        <a class="text-animated" href="logout.php" >
+          DÉCONNEXION
         </a>
-        <a class="text-animated" href="logout.php">
-          É
-        </a>
-        <a class="text-animated" href="logout.php">
-          C
-        </a>
-        <a class="text-animated" href="logout.php">
-          O
-        </a>
-        <a class="text-animated" href="logout.php">
-          N
-        </a>
-        <a class="text-animated" href="logout.php">
-          N
-        </a>
-        <a class="text-animated" href="logout.php">
-          E
-        </a>
-        <a class="text-animated" href="logout.php">
-          X
-        </a>
-        <a class="text-animated" href="logout.php">
-          I
-        </a>
-        <a class="text-animated" href="logout.php">
-          O
-        </a>
-        <a class="text-animated" href="logout.php">
-          N
-        </a>
+        <div class="close-menu">
+          <p>
+            X
+          </p>
+        </div>
+        
+        
       </div>
     </div>
     <?php
@@ -173,10 +158,10 @@
   <!-----------------------------FOOTER---------------------------------------->
   <footer>
 
-    <!-- Bande d'information du footer -->
+    <!----- Bande d'information du footer ------>
     <div class="content">
 
-      <!-- Section A propos -->
+      <!-------------- Section A propos ---------------->
       <div class="about communStyle">
           <ul>
               <li class="communFooterTitle">A propos</li>
@@ -187,7 +172,7 @@
           </ul>
       </div>
 
-      <!-- Section Contact -->
+      <!----------------- Section Contact ----------------->
       <div class="contact communStyle">
           <ul>
               <li class="communFooterTitle">Contact</li>
@@ -199,7 +184,7 @@
           </ul>
       </div>
 
-      <!-- Section Reseaux -->
+      <!---------------- Section Reseaux ------------------>
       <div class="social-net communStyle">
           <ul>
             <li>
@@ -420,7 +405,7 @@
     }
     ?>
 
-
+    <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X  +965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2  +9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3 +MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
