@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color:whitesmoke;
 	margin-bottom: 2cm;
   }
 
@@ -62,7 +63,6 @@
 
 #Check {
 	border-radius: 10px;
-	transition: all ease-in-out 250ms;
 }
 
 #Check:checked + label {
@@ -75,8 +75,7 @@
 	max-width: 520px;
 	width: 100%;
 	max-height: 430px;
-}		
-
+}
 
 @media only screen and (max-width: 1199px) {
 	.container{
