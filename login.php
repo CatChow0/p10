@@ -33,7 +33,7 @@ if (isset($_POST['submit']))
 
         // ------------------------------- Ajoute un user dans la base de donnees et chiffre le mot de passe ---------------------------------->
         $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO user (email, password) VALUES ('$email', '$pass') ";
+        $sql = "INSERT INTO user (email, password, classe_user) VALUES ('$email', '$pass', 'gtech') ";
         $req = $db->prepare($sql);
         $req->execute();
         header("Location: index.php");

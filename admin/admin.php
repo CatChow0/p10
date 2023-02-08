@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -38,7 +39,9 @@ include '../admin/partials/header.php';
 
 
     <!-- TITRE DE PAGE -->
-    <h2 class="title-admin">BIENVENUE</h2>
+    <h2 class="title-admin">BIENVENUE
+        
+    </h2>
     
     <!-- CARTES -->
 
