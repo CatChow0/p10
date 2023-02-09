@@ -38,8 +38,8 @@ require 'config/database.php';
         <div class="sidebar">
 
           <div class="title">
-            <a href="index.php"><img class="imglogogc" src="../assets/logogamingcampus.png" alt="Logo Gaming Campus" ></a>
-            <a href="index.php"><h2 class="imgtext">GC NEWS</h2></a>
+            <a href="../index.php"><img class="imglogogc" src="../assets/logogamingcampus.png" alt="Logo Gaming Campus" ></a>
+            <a href="../index.php"><h2 class="imgtext">GC NEWS</h2></a>
           </div>
 
 
@@ -57,23 +57,23 @@ require 'config/database.php';
                 <div class="card-one">
                     <div class="card-header" id="headingOne">
                         <li class="post-toggle">
-                            <a class ="main-toggle" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <a class="main-toggle" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Posts
                             </a>
-                            <a href="add-article.php"><img src="../assets/plusicon.png"></i></a>
+                            <a class="main-add" href="add-article.php"><img src="../assets/plusicon.png"></i></a>
                         </li>
                     </div>
                 
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                         <ul class="card-sub">
-                            <li><img src="../assets/check-mark.png"><a href="manage-article.php">Posts publiés</a></li>
+                            <li><a href="manage-article.php"><img src="../assets/check-mark.png">Posts publiés</a></li>
                         </ul>
                         <ul class="card-sub">
-                            <li><img src="../assets/clock.png"><a href="#">Posts prévus</a></li>
+                            <li><a href="#"><img src="../assets/clock.png">Posts prévus</a></li>
                         </ul>
                         <ul class="card-sub">
-                            <li><img src="../assets/favourite.png"><a href="#">Posts favoris</a></li>
+                            <li><a href="#"><img src="../assets/favourite.png">Posts favoris</a></li>
                         </ul>
                     </div>
                   </div>

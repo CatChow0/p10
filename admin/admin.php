@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -22,7 +21,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
         <link rel="stylesheet" href="../CSS/admin.css"/>
-        <link rel="script" href="JS/index.js"/>
 </head>
 
 <body>
@@ -39,9 +37,7 @@ include '../admin/partials/header.php';
 
 
     <!-- TITRE DE PAGE -->
-    <h2 class="title-admin">BIENVENUE
-        
-    </h2>
+    <h2 class="title-admin">BIENVENUE</h2>
     
     <!-- CARTES -->
 
