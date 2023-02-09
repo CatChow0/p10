@@ -1,8 +1,5 @@
 <?php
 
-session_start()
-
-
 class takeinfo {
     function __construct($db){
         $this->db = $db;

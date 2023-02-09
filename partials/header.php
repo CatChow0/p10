@@ -43,7 +43,7 @@ require 'config/database.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <h1 class="nav-link" href="<?=ROOT_URL?>">GC NEWS<br><span>Toute l'actualité du jeu vidéo et du Gaming Campus à votre portée !</span><span class="sr-only"></span></h1>
+              <h1 class="nav-link" href="#">GC NEWS<br><span>Toute l'actualité du jeu vidéo et du Gaming Campus à votre portée !</span><span class="sr-only"></span></h1>
             </li>
             
             <li class="nav-item dropdown">
