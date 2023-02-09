@@ -25,8 +25,8 @@ require 'config/database.php';
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="css/index.css"/>
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="./css/index.css"/>
+        <link rel="stylesheet" href="./css/login.css">
 </head>
 
   <body>
@@ -35,7 +35,7 @@ require 'config/database.php';
 
    <div class="navbar">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <img class="imglogogc" src="assets/logogamingcampus.png" alt="Logo Gaming Campus" >
+        <img class="imglogogc" src="./assets/logogamingcampus.png" alt="Logo Gaming Campus" >
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -111,8 +111,8 @@ require 'config/database.php';
               ?>
               <!--------------------PROFILE--------------------------------->
             <div class="profile-btn">
-              <a href="admin/admin.php" title="Profil">
-                <img class="iconprofil" src="assets/iconprofile.png" alt="Profil" width="32px" 
+              <a href="./admin/admin.php" title="Profil">
+                <img class="iconprofil" src="./assets/iconprofile.png" alt="Profil" width="32px" 
                 height="32px">
               </a>
             </div>
@@ -120,7 +120,7 @@ require 'config/database.php';
             <!------------------------------- Bouton logout --------------------------------->
             <div>
               <a href="#" title="Logout">
-                <img class="logout-menu" src="assets/logout.png" alt="logout" >
+                <img class="logout-menu" src="./assets/logout.png" alt="logout" >
               </a>
             </div>
             <?php

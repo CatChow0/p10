@@ -177,13 +177,15 @@ ul {
 
 /* ---------------------------FOOTERNAV--------------------------------------- */
 
+
+
 .footernav {
-  margin-top: 200px;
+  margin-top: 120px;
   padding-left: 45px;
   position: relative;
 }
 
-.footernav img {
+.add-icon {
   width: 15px;
   height: 15px;
   margin-right: 15px;
@@ -195,7 +197,24 @@ ul {
   color: black;
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 500px;
   font-family: 'Red Rose', cursive;
+}
+
+.footernav .add-new-user {
+  margin-bottom: 10px;
+}
+
+.line-top, .line-bot {
+  height: 1px;
+  width: 80%;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+.add-new-user a:hover .add-icon,.add-new-admin a:hover .add-icon{
+  transform: rotate(1turn);
+  transition: 500ms ease-in-out;
 }
 
 /* -----------------------------MAIN CONTENT------------------------------------- */

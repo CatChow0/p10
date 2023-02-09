@@ -97,14 +97,23 @@ require 'config/database.php';
                 </div>
             </div>
 
-
-
-
             <div class="footernav">
                 <ul>
-                    <li>
-                        <a href="#"><img src="../assets/addicon.png">Ajouter un nouvel admin</a>
-                    </li>
+                  <li>
+                    <div class="line-top"></div>
+                  </li>
+                  <li class="add-new-user">
+                    <a href="../register-page.php">
+                      <img class="add-icon" src="../assets/addicon.png" alt="Add icon">
+                      Ajouté un nouvelle utilisateur
+                    </a>
+                  </li>
+                  <li>
+                    <div class="line-bot"></div>
+                  </li>
+                  <li class="add-new-admin">
+                    <a href="#"><img class="add-icon" src="../assets/addicon.png">Ajouter un nouvel admin</a>
+                  </li>
                 </ul>
             </div>
         </div>

@@ -1,32 +1,10 @@
 /* --------------------------------------NAVBAR------------------------------------------------------ */
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes color-change {
-  0% {
-    color: var(--color1);
-  }
-  33% {
-    color: var(--color3);
-  }
-  66% {
-    color: var(--color2);
-  }
-  100% {
-    color: var(--color1);
   }
 }
 @keyframes color-change {
@@ -64,13 +42,9 @@ body .profile-logout.on {
   backdrop-filter: blur(7px);
   top: 0;
   z-index: 10;
-  -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
 }
 body .profile-logout.on .btn-logout {
@@ -103,7 +77,6 @@ body .profile-logout.on .btn-logout a {
   text-decoration: underline;
 }
 body .profile-logout.on .btn-logout .text-animated {
-  -webkit-animation: color-change 6s infinite;
   animation: color-change 6s infinite;
 }
 body footer .content .communStyle {
@@ -205,10 +178,8 @@ body footer .copyright h3 {
 }
 
 .search-box {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
@@ -228,12 +199,6 @@ body footer .copyright h3 {
   color: rgb(0, 0, 0);
 }
 .input-search::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
-.input-search:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
