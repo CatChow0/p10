@@ -105,7 +105,7 @@ require 'config/database.php';
                   <li class="add-new-user">
                     <a href="../register-page.php">
                       <img class="add-icon" src="../assets/addicon.png" alt="Add icon">
-                      Ajouter un nouvelle utilisateur
+                      Ajouter un nouvel utilisateur
                     </a>
                   </li>
                   <li>
