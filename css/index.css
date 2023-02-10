@@ -333,11 +333,15 @@ body footer .copyright h3 {
   justify-content: flex-end;
 }
 
+.contain-list {
+  margin-bottom: 40px;
+}
 .contain-list div h2 {
   margin-left: 180px;
   margin-bottom: 20px;
   text-transform: uppercase;
   margin-top: 50px;
+  cursor: default;
 }
 .contain-list div .select-row {
   display: flex;
@@ -345,6 +349,7 @@ body footer .copyright h3 {
 }
 .contain-list div .select-row li:hover {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 .contain-list div .select-row li {
   width: 280px;
