@@ -165,8 +165,8 @@ body footer .copyright h3 {
 .dropdown-menu {
   position: relative;
   top: 2.5rem;
-  border: none;
-  background-color: none;
+  border: rgb(197, 197, 197) solid .5px;
+  background-color: rgb(255, 255, 255) !important;
 }
 .dropdown-menu > #navbarDropdown {
   font-size: 16px;
@@ -177,9 +177,16 @@ body footer .copyright h3 {
 .dropdown-item {
   font-family: "Red Rose", cursive;
   line-height: 10px;
-  background-color: white !important;
   color: #000 !important;
 }
+
+.dropdown-item:focus {
+  font-family: "Red Rose", cursive;
+  line-height: 10px;
+  color: #000 !important;
+  background-color: white !important ;
+}
+
 .dropdown-item .tendance {
   color: aqua;
 }
@@ -342,13 +349,18 @@ body footer .copyright h3 {
   text-transform: uppercase;
   margin-top: 50px;
   cursor: default;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
 }
 .contain-list div .select-row {
   display: flex;
   justify-content: space-evenly;
 }
 .contain-list div .select-row li:hover {
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 2px rgba(197, 197, 197, 0.5);
   cursor: pointer;
 }
 .contain-list div .select-row li {
@@ -364,6 +376,43 @@ body footer .copyright h3 {
 .contain-list div .select-row li h5 {
   text-align: start;
   margin-top: 15px;
+}
+
+.actu {
+  margin-left: 180px;
+}
+
+.actu h2 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  cursor: default;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+ line-height: 56px;
+}
+
+.actu div ul {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  left: -30px;
+}
+
+.actu div ul img.actuimg {
+  width: 870px;
+  height: 400px;
+}
+
+.actu div ul li h5.desc { 
+  width: 506px;
+  height: 384px;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.likenb {
+  margin-top: 20px;
 }
 
 * {
@@ -399,3 +448,68 @@ body footer .copyright h3 {
     color: #000;
   }
 }/*# sourceMappingURL=index.css.map */
+
+/* --------------------------------------------------------- */
+
+h2.main-title  {
+  margin-left: 180px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  cursor: default;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+ line-height: 56px;
+}
+
+.actudesc .likenb {
+  font-size : 15px;
+  color: rgb(141, 141, 141);
+}
+
+img.likeimg  {
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+img.actuimg {
+  left: 100px;
+}
+
+.actuimg {
+  max-width: 120%;
+  padding-right: 15px;
+}
+
+.actudesc {
+  margin-left: 120px;
+  float: left;
+  width: 60%;
+  font-family: "Playfair Display";
+  font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  .actu {
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+
+  .actudesc {
+    font-family: "Playfair Display";
+    font-size: 18px;
+  }
+
+  .col-md-5 {
+    max-width: 100%;
+  }
+  .actuimg {
+    max-width: 100%;
+  }
+}
+ 
+/* --------------------------------------------------- */

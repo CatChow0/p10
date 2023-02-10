@@ -10,21 +10,28 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
 
 
     //si les champs sont corrects, alors intégration en bdd : 
-    $query = $conn->prepare("INSERT INTO `article`(`id_article`, `id_auteur`, `titre_article`, `description_article`, `image_article`, `classe_article`, `article_texte`, `date_publication`, `mots_cles_article`, `categorie_article`, `like_article`) VALUES (':id_article', ':id_auteur', ':titre_article', ':description_article', ':image_article', ':classe_article', ':article_texte', ':date_publication', ':mots_cles_article', ':categorie_article', ':like_article');");
+    
+    $query = $conn->prepare("SET FOREIGN_KEY_CHECKS = 0;
+    INSERT INTO `article`(`id_article`, `id_auteur`, `titre_article`, `description_article`, `image_article`, `classe_article`, `article_texte`, `date_publication`, `mots_cles_article`, `categorie_article`, `like_article`) 
+    VALUES (':id_article', ':id_auteur', ':titre_article', ':description_article', ':image_article', ':classe_article', ':article_texte', ':date_publication', ':mots_cles_article', ':categorie_article', ':like_article');
+    SET FOREIGN_KEY_CHECKS=1;");
 
-   $query->execute(array(
-    ':id_article' => $id_article, 
-    ':id_auteur' => $id_auteur, 
-    ':titre_article' => $titre_article, 
-    ':description_article'=> $description_article, 
-    ':image_article' => $image_article, 
-    ':classe_article' => $classe_article, 
-    ':article_texte' => $article_texte, 
-    ':date_publication' => $date_publication, 
-    ':mots_cles_article' => $mots_cles_article, 
-    ':categorie_article' => $categorie_article, 
-    ':like_article' =>  $like_article,
-   ));
+    $query->execute(array(
+        ':id_article' => null, 
+        ':id_auteur' => null, 
+        ':titre_article' => $_POST['titre_article'], 
+        ':description_article'=> $_POST['description_article'], 
+        ':image_article' => $_POST['image'], 
+        ':classe_article' => $_POST['classe'], 
+        ':article_texte' => $_POST['texte_article'], 
+        ':date_publication' => null, 
+        ':mots_cles_article' => null, 
+        ':categorie_article' => $_POST['cat'], 
+        ':like_article' => null,
+    ));
+    echo '<pre>';
+    print_r($_POST['titre_article']);
+    echo '</pre>';
 }
 
 ?>
@@ -61,97 +68,99 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
 <!---------------------------NAVBAR------------------------------------------>
 
 <?php
-// include '../admin/partials/header.php';
+    include '../admin/partials/header.php';
 
 ?>
 
 <!----------------------------------------MAIN CONTENT--------------------------------------------------------->
 
     <!-- TITRE DE PAGE -->
-    <h2 class="title-admin">BIENVENUE</h2>
-    
+    <h2 class="title-admin">BIENVENUE ANTHONY</h2>
+
     <!-- CARTES -->
 
     <div class="container">
-     <form method="post" action="" enctype="multipart/form-data">
+        <form method="post" action="" enctype="multipart/form-data">
 
-        <!-- TITRE -->
-        <div class="title-input">
-            <label for="titre"><h5>Titre</h5></label>
-            <input type="text" class="titre" id="titre" placeholder="Maximum 150 caractères." name="titre_article">
-        </div>
+            <!-- TITRE -->
+            <div class="title-input">
+                <label for="titre"><h5>Titre</h5></label>
+                <input type="text" class="titre" id="titre" name="titre_article">
+            </div>
 
+            <!-- DESCRIPTION -->
+            <div class="des-input">
+                <label for="comment"><h5>Description</h5></label>
+                <input class="form-control" rows="5" id="comment" name="description_article"></input>
+            </div>
 
-        <!-- DESCRIPTION -->
-        <div class="des-input">
-            <label for="comment"><h5>Description</h5></label>
-            <textarea class="form-control" rows="5" id="comment" name="description_article"></textarea>
-        </div>
+            <div class="text-input">
+                <label for="texte"><h5>Texte</h5></label>
+                <textarea class="form-control" rows="10" id="texte" name="texte_article"></textarea>
+            </div>
 
-        <div class="row">
+            <div class="row">
+                <!-- SUJET -->
+                <div class = "col-md-auto mx-5">
+                <div class = "cat-input">
+                    <label for="cat"><h5>Catégorie :</h5></label>
+                        <select id="cat" name="cat" name="subject">
+                            <option value="jeux_videos">Jeux vidéos</option>
+                            <option value="e_sport">E-sport</option>
+                            <option value="business">Business</option>
+                            <option value="politique">Politique</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+                </div>
 
-            <!-- SUJET -->
-            <div class = "col-md-auto m-5">
-            <div class = "cat-input">
-                <label for="cat"><h5>Catégorie :</h5></label>
-                    <select id="cat" name="cat" name="subject">
-                        <option value="jeux_videos">Jeux vidéos</option>
-                        <option value="e_sport">E-sport</option>
-                        <option value="business">Business</option>
-                    </select>
+                <!-- CLASSE -->
+                <div class="col-md-auto">
+                     <div for="classe">
+                         <h5>Classe :</h5>
+                     </div>
+                </div>
+
+                <div class="col-md-auto">
+                    <input class="form-check-input" type="radio" name="classe" id="gtech" checked value="gtech">
+                    <label class="form-check-label" for="gtech">
+                        G. Tech
+                    </label>
+                </div>
+
+                <div class="col-md-auto">
+                    <input class="form-check-input" type="radio" name="classe" id="gart" value="gart">
+                    <label class="form-check-label" for="gart">
+                        G. Art
+                    </label>
+                </div>
+
+                <div class="col-md-auto">
+                    <input class="form-check-input" type="radio" name="classe" id="gbusiness" value="gbusiness">
+                    <label class="form-check-label" for="gbusiness">
+                        G. Business
+                    </label>
                 </div>
             </div>
 
-
-            <!-- CLASSE -->
-            <div class="col-md-auto">
-                <div for="classe">
-                    <h5>Classe :</h5>
-                </div>
+            <!-- KEYWORDS -->
+            <div class="keywords-input">
+                <label for="keyword"><h5>Entrez des mots clés (merci d'espacer chaque mots-clés) :</h5></label>
+                <input type="text" class="form-control" id="keyword">
             </div>
 
-            <div class="col-md-auto">
-                <input class="form-check-input" type="radio" name="classe" id="gtech" checked value="gtech">
-                <label class="form-check-label" for="gtech">
-                  G. Tech
-                </label>
+            <!-- IMAGE -->
+            <div class="img-input">
+                <label for="imageinp"></label>
+                <input type="file" id="imageinp" value="image_article" name="image"accept="image/png, image/jpeg">
             </div>
 
-            <div class="col-md-auto">
-                <input class="form-check-input" type="radio" name="classe" id="gart" value="gart">
-                <label class="form-check-label" for="gart">
-                  G. Art
-                </label>
+            <!-- SUBMIT -->
+            <div class="submit-btn">
+                <input type="submit" value="Envoyer" name="send">
             </div>
-
-            <div class="col-md-auto">
-                <input class="form-check-input" type="radio" name="classe" id="gbusiness" value="gbusiness">
-                <label class="form-check-label" for="gbusiness">
-                  G. Business
-                </label>
-            </div>
-        </div>
-
-        <!-- KEYWORDS -->
-        <div class="keywords-input">
-            <label for="keyword"><h5>Entrez des mots clés (merci d'espacer chaque mots-clés) :</h5></label>
-            <input type="text" class="form-control" id="keyword">
-        </div>
-
-        <!-- IMAGE -->
-        <div class="img-input">
-            <label for="imageinp"><input type="file" id="imageinp" value="image_article"></label>
-        </div>
-
-
-        <!-- SUBMIT -->
-        <div class="submit-btn">
-            <input type="submit" value="Envoyer" name="send">
-        </div>
-    </form>
+        </form>
     </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -58,7 +58,7 @@ include '../admin/partials/header.php';
 
             <tbody>
                 <tr>
-                    <td>Ordinateur</td>
+                    <td><a href="../article.php">Post 1</a></td>
                     <td>Business</td>
                     <td>G.Business</td>
                     <td><button href="#">Modifier</button></td>
@@ -66,7 +66,7 @@ include '../admin/partials/header.php';
                 </tr>
 
                 <tr>
-                    <td>Ordinateur</td>
+                    <td>Post 2</td>
                     <td>Business</td>
                     <td>G.Tech</td>
                     <td><button href="#">Modifier</button></td>

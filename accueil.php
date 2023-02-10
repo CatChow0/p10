@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-
-
 <body>
+    <div class="actu">
+            <div>
+                <h2>Actualités</h2>
+                <ul class="selected-row">
+                    <li>
+                        <img class="actuimg" src="assets/actuimg.png" alt="actu">
+                    </li>
+                    <li>
+                        <h5 class="desc">
+                            Evénement incontournable de l’E3 chaque année, l’EA Play Live n’aura pas lieu cette année. Ce sont nos confrères maéricains de IGN.com qui ont récupéré l’information auprès d’Electronic Arts au détour d’une interview consacrée au prochain line-up de l’éditeur. Les conditions ne sont pas visiblement pas suffisamment réunies pour dévoiler tous les projets d’Electornic Arts en une seule date.
+                            <br>
+                            <br>
+                            <br>
+                            <span class="likenb">
+                                20
+                                <img class="likeimg" src="assets/thumbs-up-solid.svg">
+                            </span>
+                        </h5>
+                    </li>
+                </ul>
+
+
+            </div>
+                    
+        </div>
+    </div>
     <div class="contain-list">
         <div>
             <h2>Dernières actualités</h2>
@@ -32,7 +54,6 @@
                     <h5>MINECRAFT S'ASSOCIE AVEC LACOSTE</h5>
                 </li>
             </ul>
-
             <h2>Campus</h2>
             <ul class="select-row">
                 <li>
@@ -60,7 +81,6 @@
                     </h5>
                 </li>
             </ul>
-
             <h2>Vie associative</h2>
             <ul class="select-row">
                 <li>
@@ -94,4 +114,3 @@
     
 </body>
 </html>
-    

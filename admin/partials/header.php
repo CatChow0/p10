@@ -1,9 +1,3 @@
-<?php
-require 'config/database.php';
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -50,8 +44,6 @@ require 'config/database.php';
                     <li><a href="#"><i class="fa-solid fa-gear"></i>Paramètres</a>
                 </ul>
             </div>
-
-
 
             <div id="accordion">
                 <div class="card-one">
